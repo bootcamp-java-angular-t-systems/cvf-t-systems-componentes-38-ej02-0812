@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <h1>Crear Usuario</h1>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="mt-3">
+    <div class="form-group">
+      <label for="name">Nombre:</label><br />
+      <input type="text" id="name" formControlName="name" />
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="email">email:</label><br />
+      <input type="email" id="email" formControlName="email" />
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="message">Mensaje:</label><br />
+      <input type="text" id="message" formControlName="message" />
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="validator">2 + 3 = ? :</label><br />
+      <input type="number" id="validator" formControlName="validator" />
+    </div>
+    <br />
+    <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary">
+      Enviar
+    </button>
+  </form>
+</div>
